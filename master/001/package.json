@@ -4,7 +4,6 @@
   "description": "React MobX",
   "main": "src/index.js",
   "scripts": {
-    // With this script we will be able to run server with 'npm start' command in the terminal
     "start": "webpack-dev-server --history-api-fallback --content-base ./src --open"
   },
   "author": "",
