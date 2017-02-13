@@ -1,34 +1,26 @@
 import React from 'react'
-import Product from './Product'
+import { observer } from 'mobx-react'
 
+import Product from './Product'
+// We're importing store and we'll use it directly
+import productStore from '../stores/ProductStore'
+
+// We need to mark component as observer
+@observer
 class ProductList extends React.Component {
 
-  //6/ isSold is a new property in our state
-  state = {
-    products: [
-      { id: 0, name: 'Apple', isSold: false },
-      { id: 1, name: 'Coffee', isSold: false }
-    ]
-  }
-
-  //10/ Here is the real handler that changes the state
+  //4/ This time we cannot change the reference
   handleBuyClick = id => {
-    this.setState(previousState => {
-      const products = previousState.products.map(p => p.id === id
-        ? { ...p, isSold: true }
-        : p
-      )
-
-      return { products }
-    })
+    const productToBeSold = productStore.products.find(p => p.id === id)
+    productToBeSold.isSold = true
   }
 
   render() {
     return (
       <ul>
-        { this.state.products.map(p => (
+        {/* We can use productStore directly here too */}
+        { productStore.products.map(p => (
           <li key={ p.id }>
-            {/* Here we're passing more data */}
             <Product
               id={ p.id }
               name={ p.name }

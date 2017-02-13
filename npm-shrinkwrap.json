@@ -2135,6 +2135,11 @@
       "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-1.0.3.tgz",
       "dev": true
     },
+    "hoist-non-react-statics": {
+      "version": "1.2.0",
+      "from": "hoist-non-react-statics@>=1.2.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz"
+    },
     "home-or-tmp": {
       "version": "2.0.0",
       "from": "home-or-tmp@>=2.0.0 <3.0.0",
@@ -2531,6 +2536,16 @@
       "from": "mkdirp@>=0.5.1 <0.6.0",
       "resolved": "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz",
       "dev": true
+    },
+    "mobx": {
+      "version": "3.1.0",
+      "from": "mobx@latest",
+      "resolved": "https://registry.npmjs.org/mobx/-/mobx-3.1.0.tgz"
+    },
+    "mobx-react": {
+      "version": "4.1.0",
+      "from": "mobx-react@latest",
+      "resolved": "https://registry.npmjs.org/mobx-react/-/mobx-react-4.1.0.tgz"
     },
     "ms": {
       "version": "0.7.2",
