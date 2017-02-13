@@ -18,5 +18,4 @@ const Product = ({ id, name, isSold, onBuyClick }) => {
   )
 }
 
-// We need to mark component as observer; applies to all component that are using observables
 export default observer(Product)
