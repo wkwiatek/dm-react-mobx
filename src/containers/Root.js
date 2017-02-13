@@ -1,10 +1,10 @@
 import React from 'react'
+// Importing product list component from newly created 'components' directory
+import ProductList from '../components/ProductList'
 
-//5/ Very first (stateless functional) component
+//3/ Our root component now is rendering the product list component
 const Root = () => (
-  <div>
-    Hello MobX!
-  </div>
+  <ProductList />
 )
 
 export default Root

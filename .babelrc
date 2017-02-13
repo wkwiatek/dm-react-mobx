@@ -1,4 +1,3 @@
-//11/ Used presets and plugins are giving us the possibility to use JSX and ES2015+
 {
   "presets": [
     ["es2015", { "modules": false }],

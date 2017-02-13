@@ -1,6 +1,5 @@
 const path = require('path')
 
-//15/ Very simple webpack config just to give us the possibility to work with babel and dev server
 const config = {
   devtool: 'source-map',
   entry: {
