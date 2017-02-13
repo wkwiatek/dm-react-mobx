@@ -6,7 +6,6 @@ class ProductStore {
     { id: 1, name: 'Coffee', isSold: false },
   ]
 
-  //4/ In strict mode we have to do changes to products inside actions
   @action buyProduct = id => {
     const productToBeSold = this.products.find(p => p.id === id)
     productToBeSold.isSold = true

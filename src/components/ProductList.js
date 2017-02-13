@@ -1,21 +1,22 @@
 import React from 'react'
-import { observer } from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 
 import Product from './Product'
-import productStore from '../stores/ProductStore'
 
+/// To use a provided store we have to inject it into the component
+@inject('productStore')
 @observer
 class ProductList extends React.Component {
 
   handleBuyClick = id => {
-    // Here we're going to use an action from store
-    productStore.buyProduct(id)
+    /// The store is in props when we inject the store and provide it correctly
+    this.props.productStore.buyProduct(id)
   }
 
   render() {
     return (
       <ul>
-        { productStore.products.map(p => (
+        { this.props.productStore.products.map(p => (
           <li key={ p.id }>
             <Product
               id={ p.id }
