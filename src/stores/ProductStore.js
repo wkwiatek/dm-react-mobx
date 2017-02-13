@@ -11,7 +11,6 @@ class ProductStore {
     productToBeSold.isSold = true
   }
 
-  //3/ We can add an getter which depends on already existing value
   @computed get soldProductsNumber () {
     return this.products.filter(p => p.isSold).length
   }
