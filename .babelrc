@@ -1,11 +1,13 @@
 {
   "presets": [
-    ["es2015", { "modules": false }],
-    "react",
-    "stage-0"
+    "@babel/preset-react",
+    ["@babel/preset-env", {
+      "shippedProposals": true
+    }]
   ],
   "plugins": [
-    "transform-decorators-legacy",
-    "transform-runtime"
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose" : true }],
+    "@babel/plugin-transform-runtime"
   ]
 }

@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 const config = {
   devtool: 'source-map',
@@ -14,6 +14,6 @@ const config = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
     ]
   }
-}
+};
 
-module.exports = config
+module.exports = config;

@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import Root from './containers/Root'
-import { useStrict } from 'mobx'
+import { configure } from 'mobx';
 
-useStrict(true)
+configure({ enforceActions: 'observed' });
 
 ReactDom.render(<Root />, document.getElementById('root'))
